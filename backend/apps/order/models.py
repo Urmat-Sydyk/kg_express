@@ -1,4 +1,5 @@
 from django.db import models
+from backend.apps.accounts.models import User
 
 # Create your models here.
 
@@ -20,10 +21,5 @@ class Order(models.Model):
     address = models.CharField("Адрес", max_length=255)
     postal_code = models.CharField("Почтовый индекс", max_length=10)
     mobile = models.CharField("Номер телефона", max_length=10)
-    notice = models.CharField("Комментарии" max_length=255)
-    status = models.CharField(
-        "Статус",
-        max_length=9,
-        choices=ORDER_STATUSES,
-        default=STATUS_NEW
-    )
+    notice = models.CharField("Комментарии", max_length=255)
+    status = models.CharField("Статус", max_length=9, choices=ORDER_STATUSES, default=STATUS_NEW)
