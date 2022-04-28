@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import json
 # Create your views here.
+from django.views.generic import TemplateView
+
 from .models import SubCategory
 
 def get_subcategories(request):
@@ -10,3 +12,6 @@ def get_subcategories(request):
         category_id=int(id)).values('id', 'name'))
 
     return HttpResponse(json.dumps(result), content_type="application/json")
+
+class IndexPage(TemplateView):
+    template_name = "index.html"
