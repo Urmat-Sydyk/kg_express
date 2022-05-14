@@ -24,5 +24,4 @@ class UserRegisterForm(UserCreationForm):
             'middle_name',
             'last_name',
             'phone',
-            'avatar',
         ]

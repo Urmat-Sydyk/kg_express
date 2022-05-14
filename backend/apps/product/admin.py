@@ -40,3 +40,7 @@ class ProductAdmin(admin.ModelAdmin):
 
     ]
 
+@admin.register(BanerImage)
+class BanerImageAdmin(admin.ModelAdmin):
+    ListDisplay = ['name', 'add_link', 'image', 'created']
+    list_filter = ['created']
