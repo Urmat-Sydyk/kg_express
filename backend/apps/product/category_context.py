@@ -1,4 +1,4 @@
-from models import Category, SubCategory
+from .models import Category, SubCategory
 
 def get_categories(request):
     categories = Category.objects.all()
