@@ -58,3 +58,6 @@ class Cart():
 
     def save(self):
         self.session.modified = True
+
+
+#{% url 'add_cart' product.id %}
